@@ -1,0 +1,70 @@
+<mat-drawer-container class="sidenav-container" autosize>
+  <mat-drawer #drawer class="sidenav" mode="side">
+    <div class="project">
+      <img
+        style="width: 55px; height: 55px"
+        src="../../../assets/images/unnamed.png"
+        alt=""
+      />
+      <div class="details">
+        <div class="name">Angular Jira Clone</div>
+        <p class="title">Software Project</p>
+      </div>
+    </div>
+
+    <div class="tab active">
+      <mat-icon>view_column</mat-icon>
+      <div class="board ">Kanban Board</div>
+    </div>
+    <div class="tab">
+      <mat-icon>settings</mat-icon>
+      <div class="Settings">Project Settings</div>
+    </div>
+
+    <div class="line"></div>
+
+    <div class="tab">
+      <mat-icon>touch_app</mat-icon>
+      <div class="board">Releases</div>
+    </div>
+    <div class="tab">
+      <mat-icon>filter list icon</mat-icon>
+      <div class="Settings">Issues and filters</div>
+    </div>
+    <div class="tab">
+      <mat-icon>view_column</mat-icon>
+      <div class="board">Pages</div>
+    </div>
+    <div class="tab">
+      <mat-icon>pie_chart</mat-icon>
+      <div class="Settings">Reports Chart</div>
+    </div>
+    <div class="tab">
+      <mat-icon>settings_input_component</mat-icon>
+      <div class="Settings">Components</div>
+    </div>
+  </mat-drawer>
+
+  <div class="sidenav-content" [class.showSidenav]="!showSidenav">
+    <mat-icon
+      type="button"
+      mat-button
+      (click)="drawer.toggle(); showSidenav = true"
+      aria-hidden="false"
+      aria-label="Example home icon"
+      *ngIf="!showSidenav"
+    >
+      keyboard_arrow_right</mat-icon
+    >
+    <mat-icon
+      type="button"
+      mat-button
+      (click)="drawer.toggle(); showSidenav = false"
+      aria-hidden="false"
+      aria-label="Example home icon"
+      *ngIf="showSidenav"
+    >
+      keyboard_arrow_left</mat-icon
+    >
+  </div>
+</mat-drawer-container>

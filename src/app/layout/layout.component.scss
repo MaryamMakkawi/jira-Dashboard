@@ -1,0 +1,67 @@
+aside {
+  z-index: 999;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 4.8%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  padding-top: 25px;
+  background-color: #0000f5e6;
+  color: white;
+  & > * {
+    margin-bottom: 15px;
+    width: 100%;
+  }
+  .logo {
+    svg {
+      width: 35px;
+      height: 35px;
+    }
+  }
+  .search,
+  .issue,
+  .settings > .about {
+    line-height: 3;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.5s;
+    &:hover {
+      background-color: #ffffff34;
+    }
+  }
+  .settings {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-bottom: 40px;
+    .about {
+      margin: 10px 0 20px 15px;
+    }
+    .manager-image {
+      img {
+        transition: 0.1s;
+        border: 0px solid #ffffff34;
+      }
+      &:hover {
+        img {
+          border: 3px solid #ffffff34;
+        }
+      }
+    }
+  }
+}
+.side-route {
+  display: flex;
+  &:last-child {
+    flex: 1 1 auto;
+    height: 100%;
+  }
+}
