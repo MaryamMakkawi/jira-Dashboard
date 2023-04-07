@@ -45,26 +45,30 @@
     </div>
   </mat-drawer>
 
-  <div class="sidenav-content" [class.showSidenav]="!showSidenav">
+  <div  class="sidenav-content" [class.showSidenav]="!drawer.opened"
+  matTooltip="Press Enter to toggle"
+  matTooltipPosition="right"
+  >
     <mat-icon
       type="button"
       mat-button
-      (click)="drawer.toggle(); showSidenav = true"
+      (click)="drawer.toggle(); "
       aria-hidden="false"
-      aria-label="Example home icon"
-      *ngIf="!showSidenav"
+      *ngIf="!drawer.opened"
     >
       keyboard_arrow_right</mat-icon
     >
     <mat-icon
       type="button"
       mat-button
-      (click)="drawer.toggle(); showSidenav = false"
+      (click)="drawer.toggle();"
       aria-hidden="false"
-      aria-label="Example home icon"
-      *ngIf="showSidenav"
+      *ngIf="drawer.opened"
     >
       keyboard_arrow_left</mat-icon
     >
   </div>
 </mat-drawer-container>
+
+
+

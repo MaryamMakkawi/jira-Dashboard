@@ -1,9 +1,8 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 
-import {MatChipsModule} from '@angular/material/chips';
-import {MatSidenavModule} from '@angular/material/sidenav';
-import {MatIconModule} from '@angular/material/icon';
+import { MatChipsModule } from '@angular/material/chips';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatIconModule } from '@angular/material/icon';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatDatepickerModule } from '@angular/material/datepicker';
@@ -41,9 +40,12 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { MatTableModule } from '@angular/material/table';
+// Material DragDrop
+import {DragDropModule} from '@angular/cdk/drag-drop';
 
 const matModules = [
   MatAutocompleteModule,
+  DragDropModule,
   MatCheckboxModule,
   MatDatepickerModule,
   MatFormFieldModule,
@@ -80,16 +82,9 @@ const matModules = [
   MatTableModule,
 ];
 
-
 @NgModule({
   declarations: [],
-  imports: [
-    CommonModule,
-    MatChipsModule,
-    MatSidenavModule,MatIconModule
-  ],
-  exports:[MatChipsModule,MatSidenavModule,MatIconModule]
+  imports: [...matModules],
+  exports: [...matModules],
 })
-export class MaterialModule { }
-
-
+export class MaterialModule {}

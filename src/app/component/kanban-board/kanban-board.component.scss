@@ -1,1 +1,94 @@
+h1 {
+  font-size: xx-large;
+}
 
+.filter {
+  display: flex;
+
+  .team,
+  .filter-task {
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+  }
+  .filter-task {
+    div {
+      margin-left: 15px;
+      cursor: pointer;
+      transition: 0.3s;
+      padding: 10px 20px;
+      border-radius: 5px;
+      &:hover {
+        background-color: rgb(66, 153, 225, 0.85);
+        color: white;
+      }
+    }
+  }
+}
+
+@mixin box() {
+  cursor: grab;
+  margin-bottom: 20px;
+  background: white;
+  padding: 10px 20px;
+  .footer {
+    img {
+      width: 30px;
+      height: 30px;
+      &:hover {
+        border: 0px solid rgb(66, 153, 225, 0.85);
+        margin-top: 0px;
+      }
+    }
+    display: flex;
+    justify-content: space-between;
+    .manger {
+      display: flex;
+      align-items: center;
+      span {
+        margin-left: 10px;
+      }
+    }
+  }
+}
+
+.drag-container {
+  display: flex;
+  height: 100%;
+  margin-top: 20px;
+  .list {
+    background-color: rgba(94, 108, 132, 0.082);
+    padding: 20px 10px;
+    height: 100%;
+    width: fit-content;
+    margin-right: 10px;
+    flex: 1;
+    .box {
+      @include box;
+    }
+  }
+}
+
+.cdk-drag-preview {
+  box-sizing: border-box;
+  border-radius: 4px;
+  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),
+    0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12);
+  @include box;
+}
+
+.cdk-drag-placeholder {
+  opacity: 0;
+}
+
+.cdk-drag-animating {
+  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.box:last-child {
+  border: none;
+}
+
+.list.cdk-drop-list-dragging .box:not(.cdk-drag-placeholder) {
+  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}

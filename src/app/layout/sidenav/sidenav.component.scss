@@ -2,6 +2,7 @@
   display: inline;
   width: fit-content;
 }
+
 .sidenav-container {
   width: fit-content;
   height: 100%;
@@ -15,9 +16,8 @@
   background-color: #dddddd4d;
   border: 0;
   &.mat-drawer-side {
-    z-index: 1;
+    z-index: 1 !important;
   }
-
   .project {
     display: flex;
     color: rgba(66, 82, 110, 0.842);
@@ -42,11 +42,11 @@
       font-size: 20px;
       margin: 0 30px 0 10px;
     }
-    &.active{
-      background-color: rgba(66, 82, 110, 0.040);
+    &.active {
+      background-color: rgba(66, 82, 110, 0.04);
       color: rgb(66, 153, 225);
     }
-    &:hover{
+    &:hover {
       background-color: rgb(66 82 110 / 10%);
       color: rgb(66, 153, 225);
     }

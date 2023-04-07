@@ -1,5 +1,4 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 
 import { LayoutRoutingModule } from './layout-routing.module';
 import { LayoutComponent } from './layout.component';
@@ -14,10 +13,8 @@ import { SidenavComponent } from './sidenav/sidenav.component';
     SidenavComponent
   ],
   imports: [
-    CommonModule,
     LayoutRoutingModule,
-    SharedModule
-
+    SharedModule,
   ]
 })
 export class LayoutModule { }

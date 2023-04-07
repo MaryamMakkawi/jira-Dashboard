@@ -13,6 +13,7 @@ const routes: Routes = [
           import('../component/kanban-board/kanban-board.module').then(
             (m) => m.KanbanBoardModule
           ),
+
       },
     ],
   },

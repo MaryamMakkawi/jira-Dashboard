@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 
 import { KanbanBoardRoutingModule } from './kanban-board-routing.module';
 import { KanbanBoardComponent } from './kanban-board.component';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 
 @NgModule({
@@ -10,8 +10,8 @@ import { KanbanBoardComponent } from './kanban-board.component';
     KanbanBoardComponent
   ],
   imports: [
-    CommonModule,
-    KanbanBoardRoutingModule
+    KanbanBoardRoutingModule,
+    SharedModule
   ]
 })
 export class KanbanBoardModule { }

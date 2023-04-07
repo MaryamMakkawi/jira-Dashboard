@@ -1,4 +1,217 @@
-<div class="container" >
-<p>kanban-board works!</p>
+<h1>kanban board</h1>
 
+<div class="filter">
+  <mat-form-field appearance="fill">
+    <mat-label
+      ><mat-icon style="color: rgb(66, 153, 225, 0.85)"
+        >search</mat-icon
+      ></mat-label
+    >
+    <input matInput />
+  </mat-form-field>
+
+  <div class="team">
+    <img
+      matTooltip="maryam"
+      src="../../../assets/images/FB_IMG_1529251801510.jpg"
+      alt=""
+    />
+    <img
+      matTooltip="Ali"
+      src="../../../assets/images/FB_IMG_1529251801510.jpg"
+      alt=""
+    />
+    <img
+      matTooltip="Majd"
+      src="../../../assets/images/FB_IMG_1529251801510.jpg"
+      alt=""
+    />
+    <img
+      src="../../../assets/images/FB_IMG_1529251801510.jpg"
+      alt=""
+      matTooltip="Oula"
+    />
+    <img
+      matTooltip="hayat"
+      src="../../../assets/images/FB_IMG_1529251801510.jpg"
+      alt=""
+    />
+    <img
+      matTooltip="Zina"
+      src="../../../assets/images/FB_IMG_1529251801510.jpg"
+      alt=""
+    />
+  </div>
+
+  <div class="filter-task">
+    <div>Only My Issues</div>
+    <div>Ignore Resolved</div>
+    <div>Clear all</div>
+  </div>
+</div>
+
+<div class="drag-container">
+  <div
+    class="list"
+    cdkDropList
+    cdkDropListOrientation="vertical"
+    (cdkDropListDropped)="drop($event)"
+  >
+    <h5>BACKLOG 3</h5>
+    <!-- drag-drop -->
+    <div class="box" *ngFor="let timePeriod of timePeriods" cdkDrag>
+      <p>
+        How to build Jira clone? Follow these tutorials from its author. Update
+        part 8 - 11/2020 😍
+      </p>
+      <div class="footer">
+        <div class="manger">
+          <img src="../../../assets/images/FB_IMG_1529251801510.jpg" alt="" />
+          <span> Story-3957 </span>
+        </div>
+        <div class="state">
+          <mat-icon
+            mat-tooltip="good"
+            style="color: lightgreen"
+            type="button"
+            mat-button
+            aria-hidden="false"
+          >
+            check</mat-icon
+          >
+          <mat-icon
+            style="color: lightcoral"
+            type="button"
+            mat-button
+            aria-hidden="false"
+          >
+            arrow_upward</mat-icon
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div
+    class="list"
+    cdkDropList
+    cdkDropListOrientation="vertical"
+    (cdkDropListDropped)="drop($event)"
+  >
+    <h5>SELECTED FOR DEVELOPMENT 4</h5>
+    <!-- drag-drop -->
+    <div class="box" *ngFor="let timePeriod of timePeriods2" cdkDrag>
+      <p>
+        How to build Jira clone? Follow these tutorials from its author. Update
+        part 8 - 11/2020 😍
+      </p>
+      <div class="footer">
+        <div class="manger">
+          <img src="../../../assets/images/FB_IMG_1529251801510.jpg" alt="" />
+          <span> Story-3957 </span>
+        </div>
+        <div class="state">
+          <mat-icon
+            mat-tooltip="good"
+            style="color: lightgreen"
+            type="button"
+            mat-button
+            aria-hidden="false"
+          >
+            check</mat-icon
+          >
+          <mat-icon
+            style="color: lightcoral"
+            type="button"
+            mat-button
+            aria-hidden="false"
+          >
+            arrow_upward</mat-icon
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div
+    class="list"
+    cdkDropList
+    cdkDropListOrientation="vertical"
+    (cdkDropListDropped)="drop($event)"
+  >
+    <h5>IN PROGRESS 3</h5>
+    <!-- drag-drop -->
+    <div class="box" *ngFor="let timePeriod of timePeriods3" cdkDrag>
+      <p>
+        How to build Jira clone? Follow these tutorials from its author. Update
+        part 8 - 11/2020 😍
+      </p>
+      <div class="footer">
+        <div class="manger">
+          <img src="../../../assets/images/FB_IMG_1529251801510.jpg" alt="" />
+          <span> Story-3957 </span>
+        </div>
+        <div class="state">
+          <mat-icon
+            mat-tooltip="good"
+            style="color: lightgreen"
+            type="button"
+            mat-button
+            aria-hidden="false"
+          >
+            check</mat-icon
+          >
+          <mat-icon
+            style="color: lightcoral"
+            type="button"
+            mat-button
+            aria-hidden="false"
+          >
+            arrow_upward</mat-icon
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div
+    class="list"
+    cdkDropList
+    cdkDropListOrientation="vertical"
+    (cdkDropListDropped)="drop($event)"
+  >
+    <h5>DONE 7</h5>
+    <!-- drag-drop -->
+    <div class="box" *ngFor="let timePeriod of timePeriods4" cdkDrag>
+      <p>
+        How to build Jira clone? Follow these tutorials from its author. Update
+        part 8 - 11/2020 😍
+      </p>
+      <div class="footer">
+        <div class="manger">
+          <img src="../../../assets/images/FB_IMG_1529251801510.jpg" alt="" />
+          <span> Story-3957 </span>
+        </div>
+        <div class="state">
+          <mat-icon
+           matTooltip="good"
+            style="color: lightgreen"
+            type="button"
+            mat-button
+            aria-hidden="false"
+          >
+            check</mat-icon
+          >
+          <mat-icon
+            style="color: lightcoral"
+            type="button"
+            mat-button
+            aria-hidden="false"
+          >
+            arrow_upward</mat-icon
+          >
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
